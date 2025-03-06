@@ -1,9 +1,8 @@
 const http = require('http');
 
-const PORT = 3002;
+const PORT = 3001;
 
 const server = http.createServer((req, res) => {
-  // Handle incoming requests
   res.end('Hello from Node server!');
 });
 
