@@ -1,0 +1,46 @@
+/* Global styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Heading */
+h1 {
+  font-size: 2rem;
+  color: #C8102E;
+  margin-bottom: 20px;
+}
+
+/* API Image Styling */
+img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: transform 0.2s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Loading State */
+.loading {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 20px;
+}
