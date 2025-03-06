@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -6,7 +7,7 @@ function App() {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const response = await fetch('http://localhost:3002/weather'); //make sure this matches the port from backend
+        const response = await fetch('http://localhost:3001/weather');
         const data = await response.json();
         setWeather(data);
       } catch (error) {
@@ -19,15 +20,18 @@ function App() {
   return (
     <div>
       <h1>Houston Weather</h1>
-      {weather && (
-        <div>
-          <h2>{weather.name}</h2>
-          <p>Temperature: {weather.main?.temp} °C</p>
-          <p>Condition: {weather.weather?.[0].description}</p>
-        </div>
-      )}
+      <div className="weather-container">
+        {weather && (
+          <>
+            <h2>{weather.name}</h2>
+            <p>Temperature: {weather.main?.temp} °F</p>
+            <p>Condition: {weather.weather?.[0].description}</p>
+            <p>Feels Like: {weather.main?.feels_like} °F</p>
+          </>
+        )}
+      </div>
     </div>
   );
 }
 
-export default App;
+export default App; 
