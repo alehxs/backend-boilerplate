@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div>
-      <h1>Houston Weather</h1>
+      <h1>Weather Report</h1>
       <div className="weather-container">
         {weather && (
           <>
